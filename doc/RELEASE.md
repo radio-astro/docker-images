@@ -5,7 +5,7 @@ tarball
 -------
  * clean up the source tree, make sure it is compiling etc.
 
- * go to https://github.com/ska-sa/lwimager/releases/new and make new release.
+ * go to https://github.com/ska-sa/\<package\>/releases/new and make new release.
    Give it a proper tag name, like v1.3.0
 
 package
