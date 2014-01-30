@@ -52,12 +52,15 @@ to build and upload a package:
 ```
 
    You can also manually update debian/changelog. Make sure the
-   email adres is of a valid PPA maintainer and if the Ubuntu release
+   email adres is your valid PPA maintainer address and if the Ubuntu release
    is correct. Version number should be
    \<version\>-\<packageversion\>\<ubunturelease\>\<packageversion\>
    for example
    1.3.0-1precise1
-
+   We add the ubuntu release specific version to the package version,
+   otherwise launchpad won't accept the package. You can't upload the
+   same package version combination for multiple releases.
+   
  * commit your changes to the repository:
 
 ```shell
