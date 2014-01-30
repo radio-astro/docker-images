@@ -25,17 +25,17 @@ to build and upload a package:
    $ sudo apt-get install git devscripts dput
 ```
 
- * download the tarball, which is named \<tag\>.tar.gz
+ * download the tarball, which is named TAG.tar.gz
 
- * rename the tarball to \<packagename\>_<version>.orig.tar.gz
+ * rename the tarball to PACKAGE_VERSION.orig.tar.gz
 
- * extract the tarball (will be \<packagename\>-\<version\>
+ * extract the tarball (will be PACKAGE-VERSION)
 
  * get the debian package files:
 
 ```shell 
-   $ cd <packagename>-<version>
-   $ git clone https://github.com/ska-sa/<package>-debian
+   $ cd PACKAGE-VERSION
+   $ git clone https://github.com/ska-sa/PACKAGE-debian
 ```
 
  * make sure you are in the right branch. Idea is that every Ubuntu/Debian
@@ -79,6 +79,6 @@ to build and upload a package:
  * upload the package:
 
 ```shell
-   $ dput ppa:ska-sa/main ../<package>_<version>_source.changes
+   $ dput ppa:ska-sa/main ../PACKAGE_VERSION_source.changes
 ```
 
