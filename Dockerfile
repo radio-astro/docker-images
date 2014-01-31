@@ -5,7 +5,7 @@ VOLUME ["/data"]
 ADD docker/requirements.txt requirements.txt
 
 # make sure we have all repo's
-RUN echo "deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
 
 # install ubuntu packages
 RUN apt-get update
