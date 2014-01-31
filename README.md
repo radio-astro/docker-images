@@ -56,7 +56,7 @@ NOTE: Only use docker on Linux. docker doesn't run nativly on OSX,
 ```shell
 $ git clone https://github.com/ska-sa/papino
 $ cd papino
-$ sudo docker build .
+$ sudo docker build -t papino .
 ```
 
 
