@@ -5,11 +5,7 @@ VOLUME ["/data"]
 ADD docker/requirements.txt requirements.txt
 
 # make sure we have all repo's
-RUN cat >/etc/apt/sources.list <<EOL
-deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse
-deb http://za.archive.ubuntu.com/ubuntu/ precise-updates main universe multiverse
-deb http://security.ubuntu.com/ubuntu precise-security main universe multiverse
-EOL
+RUN echo "deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
 
 # install ubuntu packages
 RUN apt-get update
@@ -26,6 +22,5 @@ RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
 RUN pip install -r requirements.txt
 
 # run and expose a ipython notebook
-CMD /usr/local/bin/ipython notebook --ip=0.0.0.0
 EXPOSE 8888
-
+CMD ["/usr/local/bin/ipython", "notebook", "--ip=0.0.0.0"]
