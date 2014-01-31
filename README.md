@@ -53,12 +53,15 @@ http://www.docker.io/gettingstarted/
 NOTE: Only use docker on Linux. docker doesn't run nativly on OSX,
       you need to use vagrant, so there is no real benefit.
 
+NOTE2: there is also a trusted build available under the name ska-sa/papino.
 ```shell
 $ git clone https://github.com/ska-sa/papino
 $ cd papino
 $ sudo docker build -t ska-sa/papino .
 $ sudo docker run -p 8888:8888 -t -i ska-sa/papino
 ```
+
+
 
 Now you can point your browser to http://localhost:8888 to start
 using an IPython environment.
