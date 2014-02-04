@@ -4,7 +4,7 @@ MAINTAINER gijs@pythonic.nl
 ADD docker/requirements.txt /requirements.txt
 
 # make sure we have all repo's
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
 
 # install ubuntu packages
 RUN apt-get update
@@ -20,10 +20,7 @@ RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
 # install latest python modules
 RUN pip install -r /requirements.txt
 
-# mount point
-RUN mkdir -p /data
-WORKDIR /data
-
 # run and expose a ipython notebook
 EXPOSE 8888
-CMD ["/usr/local/bin/ipython", "notebook", "--ip=0.0.0.0"]
+CMD ipython notebook --pylab=inline --ip=* --MappingKernelManager.time_to_dead=10 --MappingKernelManager.first_beat=3 --notebook-dir=/data
+
