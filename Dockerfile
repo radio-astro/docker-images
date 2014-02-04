@@ -1,6 +1,7 @@
 FROM ubuntu
 MAINTAINER gijs@pythonic.nl
 VOLUME ["/data"]
+WORKDIR /data
 
 ADD docker/requirements.txt requirements.txt
 
