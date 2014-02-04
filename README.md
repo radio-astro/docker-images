@@ -56,6 +56,7 @@ NOTE: Only use docker on Linux. docker doesn't run nativly on OSX,
 and then run:
 ```shell
 $ sudo docker run -p 8888:8888 -t -i gijzelaerr/papino
+```
 
 To download the trusted build image.
 
