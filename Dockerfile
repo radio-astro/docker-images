@@ -22,5 +22,7 @@ RUN pip install -r /requirements.txt
 
 # run and expose a ipython notebook
 EXPOSE 8888
-CMD ipython notebook --pylab=inline --ip=* --MappingKernelManager.time_to_dead=10 --MappingKernelManager.first_beat=3 --notebook-dir=/data
+CMD ipython notebook --pylab=inline --ip=* \
+ --MappingKernelManager.time_to_dead=10 \
+ --MappingKernelManager.first_beat=3 --notebook-dir=/notebooks
 

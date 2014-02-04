@@ -9,4 +9,5 @@ Vagrant.configure("2") do |config|
     config.vm.provision :shell, :path => "vagrant/bootstrap.sh"
     config.vm.network "forwarded_port", guest: 8888, host: 8888
     config.vm.synced_folder "data/", "/data", owner: "vagrant", group: "vagrant"
+    config.vm.synced_folder "notebooks/", "/notebooks", owner: "vagrant", group: "vagrant"
 end
