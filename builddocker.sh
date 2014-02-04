@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo docker build -t gijzelaerr/papino .
+docker build -t gijzelaerr/papino .
 
