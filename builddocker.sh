@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo docker build -t ska-sa/papino .
+sudo docker build -t gijzelaerr/papino .
 
