@@ -20,9 +20,11 @@ RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
 # install latest python modules
 RUN pip install -r /requirements.txt
 
+ENV MEQTREES_CATTERY_PATH /usr/lib/python2.7/dist-packages/Cattery/
+
 # run and expose a ipython notebook
 EXPOSE 8888
-CMD ipython notebook --pylab=inline --ip=* \
+CMD ipython notebook --ip=* \
  --MappingKernelManager.time_to_dead=10 \
  --MappingKernelManager.first_beat=3 --notebook-dir=/notebooks
 
