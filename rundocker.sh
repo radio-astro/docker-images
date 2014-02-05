@@ -16,4 +16,4 @@ docker run \
     -v ${NOTEBOOKS}:/notebooks:rw \
     -v ${DATA}:/data:ro \
     -p 8888:8888 \
-    -t -i gijzelaerr/papino
+    -t -i gijzelaerr/papino-dev
