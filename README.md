@@ -50,9 +50,6 @@ Follow the instructions described here:
 
 http://www.docker.io/gettingstarted/
 
-NOTE: Only use docker on Linux. docker doesn't run nativly on OSX,
-      you need to use vagrant, so there is no real benefit.
-
 and then run:
 ```shell
 $ sudo docker run -p 8888:8888 -t -i gijzelaerr/papino
