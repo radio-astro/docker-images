@@ -6,6 +6,8 @@ ADD docker/requirements.txt /requirements.txt
 # make sure we have all repo's
 RUN echo "deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # install ubuntu packages
 RUN apt-get update
 RUN apt-get install -y software-properties-common python-software-properties python-pip
@@ -15,7 +17,7 @@ RUN add-apt-repository ppa:ska-sa/main
 RUN apt-get update
 RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
  python-kittens python-purr python-pyxis python-tigger  python-meqtrees-timba \
- python-meqtrees-cattery makems python-owlcat lofar
+ python-meqtrees-cattery python-owlcat lofar
 
 # install latest python modules
 RUN pip install -r /requirements.txt
