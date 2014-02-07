@@ -9,3 +9,6 @@ install:
  - sudo apt-get install lxc-docker
 script: 
  - ./builddocker
+ notifications:
+   hipchat: dc42889c409c6cd69161db13033628@papino
+
