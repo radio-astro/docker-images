@@ -50,22 +50,16 @@ Follow the instructions described here:
 
 http://www.docker.io/gettingstarted/
 
-NOTE: Only use docker on Linux. docker doesn't run nativly on OSX,
-      you need to use vagrant, so there is no real benefit.
-
 and then run:
 ```shell
-$ sudo docker run -p 8888:8888 -t -i gijzelaerr/papino
+$ ./rundocker.sh
 ```
 
-To download the trusted build image.
+To download and run the trusted build image.
 
 Alternativly you can build yourn own image
 ```shell
-$ git clone https://github.com/ska-sa/papino
-$ cd papino
-$ sudo docker build -t gijzelaerr/papino .
-$ sudo docker run -p 8888:8888 -t -i gijzelaerr/papino
+$ ./builddocker.sh
 ```
 
 Now you can point your browser to http://localhost:8888 to start
