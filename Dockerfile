@@ -26,7 +26,6 @@ RUN apt-get build-dep -y kittens purr pyxis tigger meqtrees-timba meqtrees-catte
 # install latest python modules
 RUN pip install -r /requirements.txt
 
-<<<<<<< Updated upstream
 # other python stuff
 RUN apt-get install -y python-matplotlib python-pyfits python-scipy python-qt4 python-qwt5-qt4 time
 

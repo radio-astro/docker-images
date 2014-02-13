@@ -16,7 +16,7 @@ echo "using ${DATA} for data, ${NOTEBOOKS} for notebooks"
 CONTAINER_ID=$(docker run \
     -d \
     -v ${NOTEBOOKS}:/notebooks:rw \
-    -v ${DATA}:/data:rw \
+    -v ${DATA}:/data:ro \
     -p 8888:8888 \
     -p 22 \
     -t -i gijzelaerr/papino-dev)
