@@ -13,6 +13,9 @@ RUN apt-get update
 # install ubuntu packages
 RUN apt-get install -y python-pip git build-essential make
 
+# Install SSH and supervisor
+RUN apt-get install -y openssh-server supervisor 
+
 # add SKA-SA PPA
 RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:ska-sa/main
@@ -23,6 +26,7 @@ RUN apt-get build-dep -y kittens purr pyxis tigger meqtrees-timba meqtrees-catte
 # install latest python modules
 RUN pip install -r /requirements.txt
 
+<<<<<<< Updated upstream
 # other python stuff
 RUN apt-get install -y python-matplotlib python-pyfits python-scipy python-qt4 python-qwt5-qt4 time
 
@@ -46,13 +50,24 @@ RUN cd /build/tigger && python setup.py install
 RUN cd /build/meqtrees-cattery && python setup.py install
 RUN cd /build/owlcat && python setup.py install
 
-
 # we need to set this (for now)
 ENV MEQTREES_CATTERY_PATH /usr/local/lib/python2.7/dist-packages/Cattery
 
-# run and expose a ipython notebook
-EXPOSE 8888
-CMD ipython notebook --ip=* \
- --MappingKernelManager.time_to_dead=10 \
- --MappingKernelManager.first_beat=3 --notebook-dir=/notebooks
+# Create directories required by sshd and supervisor
+RUN mkdir -p /var/run/sshd
+RUN mkdir -p /var/log/supervisor
 
+# Add the supervisor configuration file
+ADD docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Set up the root password for ssh
+RUN echo root:ska | chpasswd
+
+# Expose the SSH port
+EXPOSE 22
+
+# expose the ipython notebook port
+EXPOSE 8888
+
+# Run supervisord
+CMD ["/usr/bin/supervisord"]
