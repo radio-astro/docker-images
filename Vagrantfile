@@ -10,4 +10,5 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 8888, host: 8888
     config.vm.synced_folder "data/", "/data", owner: "vagrant", group: "vagrant"
     config.vm.synced_folder "notebooks/", "/notebooks", owner: "vagrant", group: "vagrant"
+    config.ssh.forward_x11 = true
 end
