@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get install -y libcasacore-dev \
     casacore-data lwimager python-astlib python-kittens \
     python-purr python-pyxis python-tigger \
-    python-meqtrees-timba python-meqtrees-cattery makems python-owlcat 
+    python-meqtrees-timba python-meqtrees-cattery makems python-owlcat  meqtrees
 
 # install all python modules
 sudo pip install -r /vagrant/vagrant/requirements.txt
