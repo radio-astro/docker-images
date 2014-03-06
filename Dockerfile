@@ -17,7 +17,7 @@ RUN add-apt-repository ppa:ska-sa/main
 RUN apt-get update
 RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
  python-kittens python-purr python-pyxis python-tigger  python-meqtrees-timba \
- python-meqtrees-cattery python-owlcat lofar
+ python-meqtrees-cattery python-owlcat lofar meqtrees
 
 # install latest python modules
 RUN pip install -r /requirements.txt
