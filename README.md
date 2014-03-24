@@ -20,13 +20,3 @@ docker
 
 https://github.com/ska-sa/meqtrees/wiki/Docker
 
-
-related
--------
-
-There are also native OSX packages available for OSX homebrew:
-
-https://github.com/ska-sa/homebrew-tap
-
-
-
