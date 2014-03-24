@@ -1,32 +1,48 @@
 FROM ubuntu
 MAINTAINER gijs@pythonic.nl
-
-ADD docker/requirements.txt /requirements.txt
-
-# make sure we have all repo's
-RUN echo "deb http://za.archive.ubuntu.com/ubuntu/ precise main universe multiverse" > /etc/apt/sources.list
-
 ENV DEBIAN_FRONTEND noninteractive
 
-# install ubuntu packages
-RUN apt-get update
-RUN apt-get install -y software-properties-common python-software-properties python-pip
+ADD supervisord-docker.conf /etc/supervisor/conf.d/docker.conf
+ADD conf/apt.sources.list /etc/apt/sources.list
+ADD conf/ /conf/
+ADD scripts /scripts/
 
-# add SKA-SA PPA
+## install ubuntu packages
+RUN apt-get update
+RUN cat /conf/debian_packages | xargs apt-get install -y
+
+## add SKA-SA PPA
 RUN add-apt-repository ppa:ska-sa/main
 RUN apt-get update
-RUN apt-get install -y libcasacore-dev  casacore-data lwimager python-astlib \
- python-kittens python-purr python-pyxis python-tigger  python-meqtrees-timba \
- python-meqtrees-cattery python-owlcat lofar meqtrees
 
-# install latest python modules
-RUN pip install -r /requirements.txt
+## Set up the root password for ssh
+RUN echo root:ska | chpasswd
+RUN mkdir -p /var/run/sshd
 
-ENV MEQTREES_CATTERY_PATH /usr/lib/python2.7/dist-packages/Cattery/
+## install latest python modules
+RUN pip install -r /conf/python_packages
 
-# run and expose a ipython notebook
+###
+###
+### to install the stable packages
+###
+###
+RUN cat /conf/ska_packages | xargs apt-get install -y
+
+##
+##
+## OR to build everything from source
+##
+##
+#RUN /scripts/build.sh
+
+
+## Expose the SSH port
+EXPOSE 22
+
+## expose the ipython notebook port
 EXPOSE 8888
-CMD ipython notebook --ip=* \
- --MappingKernelManager.time_to_dead=10 \
- --MappingKernelManager.first_beat=3 --notebook-dir=/notebooks
+
+## Run supervisord
+CMD ["/usr/bin/supervisord"]
 
