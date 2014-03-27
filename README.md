@@ -7,6 +7,10 @@ This is a set of tools for easily setting up various radio
 astronomy software packages in virtual machines and isolated
 environments.
 
+The idea is similar to that of CloudBioLinux, but then for
+Radio Astronomy.
+
+https://github.com/chapmanb/cloudbiolinux
 
 
 vagrant
