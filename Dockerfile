@@ -2,7 +2,7 @@ FROM gijzelaerr/trusty
 MAINTAINER gijs@pythonic.nl
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD supervisord-docker.conf /etc/supervisor/conf.d/docker.conf
+ADD conf/supervisord-docker.conf /etc/supervisor/conf.d/docker.conf
 ADD conf/apt.sources.list /etc/apt/sources.list
 ADD conf/ /conf/
 ADD scripts /scripts/

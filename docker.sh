@@ -1,4 +1,4 @@
-#!/bin/bash -ev
+#!/bin/bash -e
 #
 # Example file on how to run Docker.
 #
@@ -23,7 +23,7 @@ echo "using ${DATA} for data, ${NOTEBOOKS} for notebooks"
 echo "building docker image ${IMAGE_NAME}"
 docker build -t ${IMAGE_NAME} .
 
-echo "removing old container ${CONTAINER_NAME}
+echo "removing old container ${CONTAINER_NAME}"
 docker stop ${CONTAINER_NAME} || true
 docker rm ${CONTAINER_NAME} || true
 
@@ -36,11 +36,14 @@ docker run \
     -v ${DATA}:/data:ro \
     -p 8888 \
     -p 22 \
-    -name ${CONTAINER_NAME} \
+    --name ${CONTAINER_NAME} \
     ${IMAGE_NAME}
 
-echo ""ssh server runs on:"
+echo -n " * ssh server runs on: "
 docker port ${CONTAINER_NAME} 22
-echo "ipython notebook runs on:"
+echo
+
+echo -n " * ipython notebook runs on: "
 docker port ${CONTAINER_NAME} 8888
+echo
 

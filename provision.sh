@@ -34,7 +34,7 @@ cat /vagrant/conf/ska_packages | xargs sudo apt-get install -y
 
 
 # configure a ipython noteboot service
-sudo cp /vagrant/supervisord-vagrant.conf /etc/supervisor/conf.d/ipython.conf
+sudo cp /vagrant/conf/supervisord-vagrant.conf /etc/supervisor/conf.d/ipython.conf
 sudo service supervisor stop
 sudo service supervisor start
 
