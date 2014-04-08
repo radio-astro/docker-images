@@ -7,6 +7,10 @@ ADD conf/apt.sources.list /etc/apt/sources.list
 ADD conf/ /conf/
 ADD scripts /scripts/
 
+## disable the auto supervisor start
+RUN dpkg-divert --local --rename --add /etc/init.d/supervisor
+RUN ln -s /bin/true /etc/init.d/supervisor
+
 ## install ubuntu packages
 RUN apt-get update
 RUN cat /conf/debian_packages | xargs apt-get install -y
