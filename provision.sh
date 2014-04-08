@@ -8,11 +8,11 @@ sudo cp /vagrant/conf/apt.sources.list /etc/apt/sources.list
 
 ## install ubuntu packages
 sudo apt-get update
-cat /vagrant/conf/debian_packages | xargs apt-get install -y
+cat /vagrant/conf/debian_packages | xargs sudo apt-get install -y
 sudo apt-get upgrade -y
 
 # add the SKA-SA launchpad PPA
-sudo add-apt-repository ppa:ska-sa/main
+sudo add-apt-repository --yes ppa:ska-sa/main
 sudo apt-get update
 
 # install all python modules
