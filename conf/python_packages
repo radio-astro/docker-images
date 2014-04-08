@@ -1,6 +1,6 @@
 # file containing packages installed from pypi
 Jinja2==2.7.2
-ipython==1.1.0
+ipython==2.0.0
 pyzmq==14.0.1
 tornado==3.2
 
