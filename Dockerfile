@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM gijzelaerr/trusty
 MAINTAINER gijs@pythonic.nl
 ENV DEBIAN_FRONTEND noninteractive
 
