@@ -12,15 +12,22 @@ Radio Astronomy.
 
 https://github.com/chapmanb/cloudbiolinux
 
+By default all software from the Square Kilometre Array South
+Afrika (SKA-SA) launchpad PPA are installed:
 
-vagrant
--------
+https://launchpad.net/~ska-sa/+archive/main
+
+Software like Meqtrees:
+
+http://meqtrees.net/
+
+
+Read our vagrant notes:
 
 https://github.com/ska-sa/meqtrees/wiki/Vagrant
 
 
-docker
-------
+read our docker notes:
 
 https://github.com/ska-sa/meqtrees/wiki/Docker
 

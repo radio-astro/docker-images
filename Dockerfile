@@ -11,6 +11,10 @@ ADD scripts /scripts/
 RUN dpkg-divert --local --rename --add /etc/init.d/supervisor
 RUN ln -s /bin/true /etc/init.d/supervisor
 
+## disable the auto supervisor start
+RUN dpkg-divert --local --rename --add /etc/init.d/supervisor
+RUN ln -s /bin/true /etc/init.d/supervisor
+
 ## install ubuntu packages
 RUN apt-get update
 RUN cat /conf/debian_packages | xargs apt-get install -y

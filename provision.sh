@@ -7,15 +7,17 @@ sudo cp /vagrant/conf/apt.sources.list /etc/apt/sources.list
 
 
 ## install ubuntu packages
-sudo apt-get update -q
+sudo -E apt-get update -q
 cat /vagrant/conf/debian_packages | xargs sudo -E apt-get install -y -q
 sudo -E apt-get upgrade -y -q
 
 # add the SKA-SA launchpad PPA
-sudo add-apt-repository --yes ppa:ska-sa/main
-sudo apt-get update -q
+sudo -E add-apt-repository --yes ppa:ska-sa/main
+sudo -E apt-get update -q
 
 # install all python modules
+sudo rm -rf /tmp/pip_build_root/*  ## cleanup any failed builds
+sudo pip install astropy ## pip dependency management doesn't work properly
 sudo pip install -r /vagrant/conf/python_packages
 
 ###

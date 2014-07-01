@@ -34,16 +34,15 @@ docker run \
     -t \
     -v ${NOTEBOOKS}:/notebooks:rw \
     -v ${DATA}:/data:ro \
-    -p 8888 \
-    -p 22 \
+    -p 8888:8888 \
+    -p 2222:22 \
     --name ${CONTAINER_NAME} \
     ${IMAGE_NAME}
 
-echo -n " * ssh server runs on: "
+echo -n " * ssh server runs on:"
 docker port ${CONTAINER_NAME} 22
-echo
-
+echo 
 echo -n " * ipython notebook runs on: "
 docker port ${CONTAINER_NAME} 8888
-echo
+echo 
 
