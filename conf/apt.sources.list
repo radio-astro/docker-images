@@ -1,10 +1,11 @@
-deb http://za.archive.ubuntu.com/ubuntu/ trusty main universe multiverse restricted
-deb http://za.archive.ubuntu.com/ubuntu/ trusty-updates main universe multiverse restricted
-deb http://za.archive.ubuntu.com/ubuntu trusty-backports main universe multiverse restricted
-deb http://security.ubuntu.com/ubuntu trusty-security main universe multiverse restricted
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
 
-deb-src http://za.archive.ubuntu.com/ubuntu/ trusty main universe multiverse restricted
-deb-src http://za.archive.ubuntu.com/ubuntu/ trusty-updates main universe multiverse restricted
-deb-src http://za.archive.ubuntu.com/ubuntu trusty-backports main universe multiverse restricted
-deb-src http://security.ubuntu.com/ubuntu trusty-security main universe multiverse restricted
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
+deb-src mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
+
 
