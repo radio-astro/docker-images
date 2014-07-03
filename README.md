@@ -1,16 +1,27 @@
-papino
+About
 ======
 
-Springboard for radio astronomy software.
-
-This is a set of tools for easily setting up various radio
+Papino is a springboard for radio astronomy software. It is a
+set of tools for easily setting up various radio
 astronomy software packages in virtual machines and isolated
 environments.
 
-The idea is similar to that of CloudBioLinux, but then for
-Radio Astronomy.
 
-https://github.com/chapmanb/cloudbiolinux
+Installation & usage
+====================
+
+For now we recommend using Papino the Vagrant way:
+
+https://github.com/ska-sa/meqtrees/wiki/Vagrant
+
+
+If you know what you're doing try out the docker way:
+
+https://github.com/ska-sa/meqtrees/wiki/Docker
+
+
+The software
+============
 
 By default all software from the Square Kilometre Array South
 Afrika (SKA-SA) launchpad PPA are installed:
@@ -22,12 +33,10 @@ Software like Meqtrees:
 http://meqtrees.net/
 
 
-Read our vagrant notes:
 
-https://github.com/ska-sa/meqtrees/wiki/Vagrant
+Related projects
+================
 
-
-read our docker notes:
-
-https://github.com/ska-sa/meqtrees/wiki/Docker
+ * https://github.com/chapmanb/cloudbiolinux
+ * https://github.com/andrewclegg/snake-charmer
 
