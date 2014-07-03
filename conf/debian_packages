@@ -6,4 +6,5 @@ python2.7-dev
 build-essential
 supervisor
 openssh-server
-
+python-numpy
+python-scipy
