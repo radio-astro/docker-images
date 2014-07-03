@@ -6,6 +6,12 @@
 # free to do use it however you want or write your own scripts.
 #
 
+if [ -x "/usr/bin/docker.io" ]; then
+    DOCKER="/usr/bin/docker.io"
+else
+    DOCKER="docker"
+fi
+
 CONTAINER_NAME="papino"
 IMAGE_NAME="gijzelaerr/${CONTAINER_NAME}"
 
@@ -21,15 +27,15 @@ fi
 echo "using ${DATA} for data, ${NOTEBOOKS} for notebooks"
 
 echo "building docker image ${IMAGE_NAME}"
-docker build -t ${IMAGE_NAME} .
+${DOCKER} build -t ${IMAGE_NAME} .
 
 echo "removing old container ${CONTAINER_NAME}"
-docker stop ${CONTAINER_NAME} || true
-docker rm ${CONTAINER_NAME} || true
+${DOCKER} stop ${CONTAINER_NAME} || true
+${DOCKER} rm ${CONTAINER_NAME} || true
 
 
 echo "running image ${IMAGE_NAME} as container ${CONTAINER_NAME}"
-docker run \
+${DOCKER} run \
     -d \
     -t \
     -v ${NOTEBOOKS}:/notebooks:rw \
@@ -40,9 +46,9 @@ docker run \
     ${IMAGE_NAME}
 
 echo -n " * ssh server runs on:"
-docker port ${CONTAINER_NAME} 22
+${DOCKER} port ${CONTAINER_NAME} 22
 echo 
 echo -n " * ipython notebook runs on: "
-docker port ${CONTAINER_NAME} 8888
+${DOCKER} port ${CONTAINER_NAME} 8888
 echo 
 

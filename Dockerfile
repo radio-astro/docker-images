@@ -1,4 +1,4 @@
-FROM gijzelaerr/trusty
+FROM ubuntu:14.04
 MAINTAINER gijs@pythonic.nl
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -6,14 +6,6 @@ ADD conf/supervisord-docker.conf /etc/supervisor/conf.d/docker.conf
 ADD conf/apt.sources.list /etc/apt/sources.list
 ADD conf/ /conf/
 ADD scripts /scripts/
-
-## disable the auto supervisor start
-RUN dpkg-divert --local --rename --add /etc/init.d/supervisor
-RUN ln -s /bin/true /etc/init.d/supervisor
-
-## disable the auto supervisor start
-RUN dpkg-divert --local --rename --add /etc/init.d/supervisor
-RUN ln -s /bin/true /etc/init.d/supervisor
 
 ## install ubuntu packages
 RUN apt-get update
@@ -27,7 +19,9 @@ RUN apt-get update
 RUN echo root:ska | chpasswd
 RUN mkdir -p /var/run/sshd
 
-## install latest python modules
+# install all python modules
+RUN rm -rf /tmp/pip_build_root/*  ## cleanup any failed builds
+RUN pip install astropy ## pip dependency management doesn't work properly
 RUN pip install -r /conf/python_packages
 
 ###
