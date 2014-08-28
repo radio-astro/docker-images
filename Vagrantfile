@@ -11,4 +11,8 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder "data/", "/data", owner: "vagrant", group: "vagrant"
     config.vm.synced_folder "notebooks/", "/notebooks", owner: "vagrant", group: "vagrant"
     config.ssh.forward_x11 = true
+    config.vm.provider "virtualbox" do |v|
+      v.memory = 2048  # if compiling about 1GB per CPU is adviced
+      v.cpus = 2
+    end
 end
