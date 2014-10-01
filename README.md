@@ -41,6 +41,17 @@ And Casacore:
 https://code.google.com/p/casacore/
 
 
+Getting involved
+================
+
+There is a google group available for discussion and announcements:
+
+
+https://groups.google.com/forum/#!forum/papino-discussion
+
+If you have a problem with a package or want to see a package added to the repository please open a issue on the issue tracker.
+
+
 
 Related projects
 ================
