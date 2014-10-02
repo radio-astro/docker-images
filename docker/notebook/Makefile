@@ -10,5 +10,8 @@ docker-image:
 clean:
 	docker rmi ${DOCKER_REPO}
 
-run: docker-image
+run:
+	docker run -P ${DOCKER_REPO}
+
+run-connected: docker-image
 	docker run -v $(realpath ../../notebooks):/notebooks:rw -v $(realpath ../../data):/data/:ro -P ${DOCKER_REPO}
