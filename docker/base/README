@@ -1,0 +1,10 @@
+This is the base Papino Docker image. It is:
+
+* Based on Ubuntu 14.04
+* Has worldwide location based mirrors configured
+* Has Universe, Multiverse and Restricted repo's enabled.
+* Has the SKA-SA main launchpad PPA enabled
+
+You can manually build this image or download it
+from the docker hub with the name gijzelaerr/papino.
+
