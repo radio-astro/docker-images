@@ -1,0 +1,8 @@
+version: v1beta2
+containers:
+  - name: papino-notebook
+    image: gijzelaerr/papino-notebook
+    ports:
+      - name: notebook
+        hostPort: 8888
+        containerPort: 8888
