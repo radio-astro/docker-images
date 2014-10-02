@@ -1,0 +1,8 @@
+This is a docker image with:
+
+* Based on gijzelaerr/papino
+* Installs various radio astronimical software packages
+* Runs a meqtrees server and ssh on port 22
+* Has a root account with password ska
+
+

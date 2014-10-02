@@ -1,0 +1,11 @@
+# file containing packages installed from pypi
+Jinja2
+ipython==2.3.0
+pyzmq
+tornado
+astropy
+aplpy
+numpy
+scipy
+
+
