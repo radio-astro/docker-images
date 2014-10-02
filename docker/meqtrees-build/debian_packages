@@ -1,0 +1,7 @@
+build-essential
+devscripts
+libcasacore-dev
+casacore-data
+python-astlib
+python-pyrap
+git

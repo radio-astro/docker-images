@@ -1,0 +1,6 @@
+This is a docker image:
+
+* Based on gijzelaerr/papino
+* Builds meqtrees and related software from source
+
+
