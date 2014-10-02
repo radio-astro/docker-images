@@ -3,19 +3,23 @@ About
 
 Papino is a springboard for radio astronomy software. It is a
 set of tools for easily setting up various radio
-astronomy software packages in virtual machines and isolated
-environments.
+astronomy software packages on Ubuntu in virtual machines or isolated
+container environments.
 
 
 Installation & usage
 ====================
 
-For now we recommend using Papino the Vagrant way:
+you can install all packages on a Ubuntu ystem:
+
+https://github.com/ska-sa/meqtrees/wiki/UbuntuPackages
+
+Or run a Ubuntu with the installed packages
+in a virtual machine:
 
 https://github.com/ska-sa/meqtrees/wiki/Vagrant
 
-
-If you know what you're doing try out the docker way:
+Or run in it inside docker containers:
 
 https://github.com/ska-sa/meqtrees/wiki/Docker
 
@@ -31,6 +35,21 @@ https://launchpad.net/~ska-sa/+archive/main
 Software like Meqtrees:
 
 http://meqtrees.net/
+
+And Casacore:
+
+https://code.google.com/p/casacore/
+
+
+Getting involved
+================
+
+There is a google group available for discussion and announcements:
+
+
+https://groups.google.com/forum/#!forum/papino-discussion
+
+If you have a problem with a package or want to see a package added to the repository please open a issue on the issue tracker.
 
 
 
