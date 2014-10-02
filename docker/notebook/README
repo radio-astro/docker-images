@@ -1,0 +1,6 @@
+This is a docker image with:
+
+* Based on gijzelaerr/papino
+* Installs various radio astronimical software packages
+* Runs a ipython notebook on port 8888 
+

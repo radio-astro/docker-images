@@ -1,0 +1,6 @@
+python-pip
+libzmq-dev
+supervisor
+openssh-server
+python-numpy
+python-scipy
