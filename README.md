@@ -59,3 +59,8 @@ Related projects
  * https://github.com/chapmanb/cloudbiolinux
  * https://github.com/andrewclegg/snake-charmer
 
+
+Credits
+=======
+
+Gijs Molenaar - http://pythonic.nl
