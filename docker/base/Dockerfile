@@ -4,7 +4,7 @@ MAINTAINER gijs@pythonic.nl
 ENV DEBIAN_FRONTEND noninteractive
 
 # enable universe, multiverse, restricted with world wide mirrors
-ADD conf/apt.sources.list /etc/apt/sources.list
+ADD apt.sources.list /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y software-properties-common python-software-properties
