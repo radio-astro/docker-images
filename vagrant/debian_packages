@@ -1,10 +1,5 @@
 software-properties-common
 python-software-properties 
 python-pip
-libzmq-dev
-python2.7-dev
-build-essential
-supervisor
-openssh-server
-python-numpy
-python-scipy
+docker.io
+

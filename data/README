@@ -1,3 +1,0 @@
-put your data here, or change the Vagrant/Docker config to point to
-the location of your data. it will be mounted as /data in papino
-virtual machine/container.

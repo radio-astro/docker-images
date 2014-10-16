@@ -1,44 +1,69 @@
 About
 ======
 
-Papino is a springboard for radio astronomy software. It is a
-set of tools for easily setting up various radio
-astronomy software packages on Ubuntu in virtual machines or isolated
-container environments.
+Papino is a springboard for radio astronomy software. It is an umbrella
+project for:
+
+ * the Debian packages in the SKA-SA launchpad PPA
+   https://launchpad.net/~ska-sa/+archive/ubuntu/main
+
+ * Various docker build files which contain various
+   radio astronomical software packages
 
 
-Installation & usage
-====================
+Installing packages on Ubuntu 14.04
+===================================
 
-you can install all packages on a Ubuntu ystem:
+enable the SKA-SA PPA run:
 
-https://github.com/ska-sa/meqtrees/wiki/UbuntuPackages
+```shell
+sudo apt-get update
+sudo apt-get install -y python-software-properties software-properties-common
+sudo add-apt-repository ppa:ska-sa/main
+ sudo apt-get update
+ ```
 
-Or run a Ubuntu with the installed packages
-in a virtual machine:
+Now to install MeqTrees (and other useful packages) run:
+```shell
+sudo apt-get install meqtrees lwimager lofar
+```
 
-https://github.com/ska-sa/meqtrees/wiki/Vagrant
+Docker images
+=============
 
-Or run in it inside docker containers:
+This repository contains the build files for various docker images.
+You don't need this repository to use these images, you can download
+them from the docker hub. But feel free to base your Dockerfile the.
+files in this reposity.
 
-https://github.com/ska-sa/meqtrees/wiki/Docker
+papino
+------
+
+A basic Ubuntu image with the ska-sa PPA repository enabled.
+
+usage: `$ docker run gijzelaerr/papino <cmd>`
+
+https://registry.hub.docker.com/u/gijzelaerr/papino/
 
 
-The software
-============
+meqtrees
+--------
 
-By default all software from the Square Kilometre Array South
-Afrika (SKA-SA) launchpad PPA are installed:
+A papino image with meqtrees installed
 
-https://launchpad.net/~ska-sa/+archive/main
+usage: `$ docker run gijzelaerr/papino-meqtrees <cmd>`
 
-Software like Meqtrees:
+https://registry.hub.docker.com/u/gijzelaerr/papino-meqtrees/
 
-http://meqtrees.net/
 
-And Casacore:
+meqtrees nightly build
+-----------------------
 
-https://code.google.com/p/casacore/
+A papino image with the nightly build of all meqtrees related software
+
+usage: `$ docker run gijzelaerr/papino-meqtrees-build <cmd>`
+
+https://registry.hub.docker.com/u/gijzelaerr/papino-meqtrees-build/
 
 
 Getting involved
@@ -46,18 +71,15 @@ Getting involved
 
 There is a google group available for discussion and announcements:
 
-
 https://groups.google.com/forum/#!forum/papino-discussion
 
 If you have a problem with a package or want to see a package added to the repository please open a issue on the issue tracker.
 
 
+What is a Papino?
+=================
 
-Related projects
-================
-
- * https://github.com/chapmanb/cloudbiolinux
- * https://github.com/andrewclegg/snake-charmer
+A Papino is a small papaya.
 
 
 Credits
