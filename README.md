@@ -4,8 +4,7 @@ About
 Papino is a springboard for radio astronomy software. It is an umbrella
 project for:
 
- * the Debian packages in the SKA-SA launchpad PPA
-   https://launchpad.net/~ska-sa/+archive/ubuntu/main
+ * the Debian packages in the [SKA-SA launchpad PPA](https://launchpad.net/~ska-sa/+archive/ubuntu/main)
 
  * Various docker build files which contain various
    radio astronomical software packages
@@ -20,7 +19,7 @@ enable the SKA-SA PPA run:
 sudo apt-get update
 sudo apt-get install -y python-software-properties software-properties-common
 sudo add-apt-repository ppa:ska-sa/main
- sudo apt-get update
+sudo apt-get update
  ```
 
 Now to install MeqTrees (and other useful packages) run:
