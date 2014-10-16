@@ -66,6 +66,12 @@ usage: `$ docker run gijzelaerr/papino-meqtrees-build <cmd>`
 https://registry.hub.docker.com/u/gijzelaerr/papino-meqtrees-build/
 
 
+What about vagrant
+==================
+
+Just the docker images inside a vagrant instance.
+
+
 Getting involved
 ================
 
