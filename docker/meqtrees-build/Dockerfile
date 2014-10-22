@@ -2,6 +2,7 @@ FROM gijzelaerr/papino
 
 # install standard debian packages
 ADD debian_packages /
+RUN apt-get update
 RUN cat /debian_packages | xargs apt-get install -y
 
 # build everything
