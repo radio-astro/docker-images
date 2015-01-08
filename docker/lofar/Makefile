@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/lofar
+DOCKER_REPO=radioastro/lofar
 
 .PHONY: build clean run
 

@@ -1,4 +1,4 @@
-FROM gijzelaerr/papino
+FROM radioastro/base
 
 # install standard debian packages
 ADD debian_packages /

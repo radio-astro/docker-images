@@ -1,4 +1,4 @@
-FROM gijzelaerr/papino
+FROM radioastro/base
 
 ADD supervisord.conf /etc/supervisor/conf.d/docker.conf
 ADD debian_packages /

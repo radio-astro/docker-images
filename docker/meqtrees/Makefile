@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/papino-meqtrees
+DOCKER_REPO=radioastro/meqtrees
 
 .PHONY: build clean run
 

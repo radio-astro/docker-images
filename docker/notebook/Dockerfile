@@ -1,4 +1,4 @@
-FROM gijzelaerr/papino
+FROM radioastro/base
 
 ADD debian_packages /
 ADD ska_packages /

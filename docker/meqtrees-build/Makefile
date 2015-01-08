@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/papino-meqtrees-build
+DOCKER_REPO=radioastro/meqtrees-build
 
 .PHONY: docker-image clean
 

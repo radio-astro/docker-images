@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/papino
+DOCKER_REPO=radioastro/base
 
 .PHONY: docker-image clean
 

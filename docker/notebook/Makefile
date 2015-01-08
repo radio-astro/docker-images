@@ -1,4 +1,4 @@
-DOCKER_REPO=gijzelaerr/papino-notebook
+DOCKER_REPO=radioastro/notebook
 
 .PHONY: docker-image clean
 
