@@ -6,6 +6,8 @@ You don't need this repository to use these images, you can download
 them from the docker hub. But feel free to base your Dockerfile the.
 files in this reposity.
 
+You can request new images by opening a new issue in this github repository.
+
 base
 ----
 
@@ -16,21 +18,12 @@ usage: `$ docker run radioastro/base <cmd>`
 https://registry.hub.docker.com/u/radioastro/base/
 
 
+lofar
+----
 
+A base radio-astro container with the LOFAR user software installed
 
-What about vagrant
-==================
+usage: `$ docker run radioastro/lofar <cmd>`
 
-Just use the docker images inside a vagrant instance.
-
-
-Getting involved
-================
-
-There is a google group available for discussion and announcements:
-
-https://groups.google.com/forum/#!forum/papino-discussion
-
-If you have a problem with a package or want to see a package added to the
-repository please open a issue on the issue tracker.
+https://registry.hub.docker.com/u/radioastro/lofar/
 
