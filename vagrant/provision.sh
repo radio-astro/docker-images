@@ -11,5 +11,5 @@ cat /vagrant/debian_packages | xargs sudo -E apt-get install -y -q
 sudo -E apt-get upgrade -y -q
 
 # add the SKA-SA launchpad PPA
-sudo -E add-apt-repository --yes ppa:ska-sa/main
+sudo -E add-apt-repository --yes ppa:radio-astro/main
 sudo -E apt-get update -q
