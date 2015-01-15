@@ -19,6 +19,6 @@ EXPOSE 8888
 
 VOLUME /notebooks
 
-## Run supervisord
+## Run ipython notebook
 CMD /usr/bin/python /usr/local/bin/ipython notebook --ip=* --MappingKernelManager.time_to_dead=10 --MappingKernelManager.first_beat=3 --notebook-dir=/notebooks --pylab inline
 
