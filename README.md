@@ -48,7 +48,7 @@ A ready to use IPython notebook container with various (radio) astronomy librari
 
 usage: `$ docker run -tiP radioastro/notebook`
 
-**note**: When using -P you autoconfigure the linekd port, find out what is the linked port with `docker ps`. You can also force the port number with -p <portnumber>:8888. 
+**note**: When using -P you autoconfigure the linked port, find out what is the linked port with `docker ps`. You can also force the port number with `-p <portnumber>:8888`. 
 
 **note 2**: By default the notebooks are stored inside the container in `/notebooks`. You can map a custom folder containing notebooks into the container using `-v`, for example `-v /home/you/notebooks:/notebooks`.
 
