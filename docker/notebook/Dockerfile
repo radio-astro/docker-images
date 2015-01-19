@@ -4,6 +4,9 @@ ADD debian_packages /
 ADD ska_packages /
 ADD python_packages /
 
+# update deb cache
+RUN apt-get update
+
 # install standard debian packages
 RUN cat /debian_packages | xargs apt-get install -y
 
@@ -14,7 +17,7 @@ RUN cat /ska_packages | xargs apt-get install -y
 RUN pip install astropy  ## pip dependency management doesn't work properly
 RUN pip install -r /python_packages
 
-## Expose the SSH and ipython notebook port
+## Expose the ipython notebook port
 EXPOSE 8888
 
 VOLUME /notebooks
