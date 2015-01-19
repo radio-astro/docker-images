@@ -8,6 +8,17 @@ files in this reposity.
 
 You can request new images by opening a new issue in this github repository.
 
+What is docker
+==============
+
+Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
+
+https://www.docker.com/
+
+
+The radio astronomy docker images
+=================================
+
 base
 ----
 
@@ -15,15 +26,31 @@ A basic Ubuntu image with the radio-astro PPA repository enabled.
 
 usage: `$ docker run radioastro/base <cmd>`
 
+**note**: you can use this image as a base for your custom image. Just put `FROM: radioastro/base` as the first line in your `Dockerfile`.
+
 https://registry.hub.docker.com/u/radioastro/base/
 
 
 lofar
-----
+-----
 
 A base radio-astro container with the LOFAR user software installed
 
 usage: `$ docker run radioastro/lofar <cmd>`
 
 https://registry.hub.docker.com/u/radioastro/lofar/
+
+
+notebook
+--------
+
+A ready to use IPython notebook container with various (radio) astronomy libraries installed.
+
+usage: `$ docker run -tiP radioastro/notebook`
+
+**note**: When using -P you autoconfigure the linked port, find out what is the linked port with `docker ps`. You can also force the port number with `-p <portnumber>:8888`. 
+
+**note 2**: By default the notebooks are stored inside the container in `/notebooks`. You can map a custom folder containing notebooks into the container using `-v`, for example `-v /home/you/notebooks:/notebooks`.
+
+https://registry.hub.docker.com/u/radioastro/notebook/
 
