@@ -54,3 +54,14 @@ usage: `$ docker run -tiP radioastro/notebook`
 
 https://registry.hub.docker.com/u/radioastro/notebook/
 
+
+CyberSKA viewer
+---------------
+
+A web based FITS file viewer which you can embed in your web application. Note that you need a pureweb license to use this software.
+
+usage: `$ docker run -d -p 80:80 -p 8080:8080 -v pureweb.lic:opt/CSI/PureWeb/Server/conf/pureweb.lic` /radioastro/cyberska-viewer`
+
+https://registry.hub.docker.com/u/gijzelaerr/cyberska-viewer/
+
+**note**: the docker files are not hosted here but together with the source: https://github.com/radio-astro/cyberska_viewer
