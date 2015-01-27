@@ -1,11 +1,20 @@
 # file containing packages installed from pypi
 Jinja2
-ipython==2.3.0
+ipython
 pyzmq
 tornado
 astropy
 aplpy
 numpy
 scipy
+pandas
+scikit-learn
+matplotlib
+seaborn
+bokeh
+ggplot
+plotly
+prettyplotlib
+psycopg2
 
 

@@ -13,5 +13,8 @@ RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository -y ppa:radio-astro/main
 RUN apt-get update
 
+## cleanup package cache
+RUN apt-get clean
+
 # make sure child images have latest deb package cache
-ONBUILD apt-get update
+ONBUILD RUN apt-get update

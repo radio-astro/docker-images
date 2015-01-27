@@ -11,7 +11,7 @@ clean:
 	docker rmi ${DOCKER_REPO}
 
 run:
-	docker run -P ${DOCKER_REPO}
-
-run-connected: docker-image
-	docker run -v $(realpath ../../notebooks):/notebooks:rw -v $(realpath ../../data):/data/:ro -P ${DOCKER_REPO}
+	docker run -itP \
+		-v $(realpath notebooks):/notebooks:rw \
+		-v $(realpath data):/data:ro \
+		${DOCKER_REPO}
