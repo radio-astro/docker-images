@@ -41,6 +41,16 @@ usage: `$ docker run radioastro/lofar <cmd>`
 https://registry.hub.docker.com/u/radioastro/lofar/
 
 
+meqtrees
+-----
+
+A base radio-astro container with the meqtrees software installed
+
+usage: `$ docker run radioastro/meqtrees <cmd>`
+
+https://registry.hub.docker.com/u/radioastro/meqtrees/
+
+
 notebook
 --------
 
