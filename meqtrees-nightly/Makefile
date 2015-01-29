@@ -1,4 +1,4 @@
-DOCKER_REPO=radioastro/meqtrees-build
+DOCKER_REPO=radioastro/meqtrees-nightly
 
 .PHONY: docker-image clean
 
