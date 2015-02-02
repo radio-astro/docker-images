@@ -6,7 +6,7 @@ GITHUB_URL="https://github.com/ska-sa/"
 BUILD_ROOT="/build/"
 
 # make sure all dependencies are installed
-apt-get build-dep -y ${PACKAGES}
+apt-get build-dep -qy ${PACKAGES}
 
 mkdir -p ${BUILD_ROOT}
 
