@@ -51,6 +51,16 @@ usage: `$ docker run radioastro/meqtrees <cmd>`
 https://registry.hub.docker.com/u/radioastro/meqtrees/
 
 
+meqtrees
+-----
+
+A base radio-astro container with the nightly build of all meqtrees software
+
+usage: `$ docker run radioastro/meqtrees-nightly <cmd>`
+
+https://registry.hub.docker.com/u/radioastro/meqtrees-nightly/
+
+
 notebook
 --------
 
