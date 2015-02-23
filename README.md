@@ -96,3 +96,37 @@ usage: `$ docker run -d -p 80:80 -p 8080:8080 -v pureweb.lic:opt/CSI/PureWeb/Ser
 https://registry.hub.docker.com/u/gijzelaerr/cyberska-viewer/
 
 **note**: the docker files are not hosted here but together with the source: https://github.com/radio-astro/cyberska_viewer
+
+
+Running meqtrees browser using docker images on OSX
+===================================================
+
+
+install boot2docker, socat and xquart
+-------------------------------------
+
+You can do this with home-brew and cask:
+
+ * http://caskroom.io/
+ * http://brew.sh/
+
+```
+$ brew cask install xquartz
+$ brew install socat boot2docker
+```
+
+Bring the boot2docker virtual machine up
+----------------------------------------
+
+```
+$ boot2docker up
+$ `boot2docker shellinit`
+```
+
+Get calibratin
+==============
+
+````
+$ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
+$ docker run -e DISPLAY=192.168.59.3:0 radioastro/meqtrees /usr/bin/meqbrowser.py
+````
