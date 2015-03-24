@@ -1,11 +1,11 @@
 DOCKER_REPO=radioastro/base
 
-.PHONY: docker-image clean
+.PHONY: build clean
 
-all: docker-image
+all: build
 
-docker-image:
-		docker build -t ${DOCKER_REPO} .
+build:
+		docker build --pull -t ${DOCKER_REPO} .
 
 clean:
 	docker rmi ${DOCKER_REPO}
