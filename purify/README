@@ -1,0 +1,6 @@
+This is a docker image with:
+
+* Based on radioastro/base
+* Installs purify software
+
+
