@@ -72,31 +72,6 @@ usage: `$ docker run radioastro/meqtrees-nightly <cmd>`
 https://registry.hub.docker.com/u/radioastro/meqtrees-nightly/
 
 
-notebook
---------
-
-A ready to use IPython notebook container with various (radio) astronomy libraries installed.
-
-usage: `$ docker run -tiP radioastro/notebook`
-
-**note**: When using -P you autoconfigure the linked port, find out what is the linked port with `docker ps`. You can also force the port number with `-p <portnumber>:8888`. 
-
-**note 2**: By default the notebooks are stored inside the container in `/notebooks`. You can map a custom folder containing notebooks into the container using `-v`, for example `-v /home/you/notebooks:/notebooks`.
-
-https://registry.hub.docker.com/u/radioastro/notebook/
-
-
-CyberSKA viewer
----------------
-
-A web based FITS file viewer which you can embed in your web application. Note that you need a pureweb license to use this software.
-
-usage: `$ docker run -d -p 80:80 -p 8080:8080 -v pureweb.lic:opt/CSI/PureWeb/Server/conf/pureweb.lic` /radioastro/cyberska-viewer`
-
-https://registry.hub.docker.com/u/gijzelaerr/cyberska-viewer/
-
-**note**: the docker files are not hosted here but together with the source: https://github.com/radio-astro/cyberska_viewer
-
 
 Running meqtrees browser using docker images on OSX
 ===================================================
