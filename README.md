@@ -28,53 +28,27 @@ usage: `$ docker run radioastro/base <cmd>`
 
 **note**: you can use this image as a base for your custom image. Just put `FROM: radioastro/base` as the first line in your `Dockerfile`.
 
+https://github.com/radio-astro/docker-base
 https://registry.hub.docker.com/u/radioastro/base/
 
 
-lofar
------
+casa
+----
 
-A base radio-astro container with the LOFAR user software installed
-
-usage: `$ docker run radioastro/lofar <cmd>`
-
-https://registry.hub.docker.com/u/radioastro/lofar/
+A docker image containing NRAO's casa. Supports 4.2, 4.3, 4.4 and 4.5
 
 
-pyimager
---------
+usage: `$ docker run radioastro/casa:4.5`
 
-A base radio-astro container with pyimager installed
+**note**: This container is very big.
 
-usage: `$ docker run radioastro/pyimager <cmd>`
-
-https://registry.hub.docker.com/u/radioastro/pyimager/
+https://github.com/radio-astro/docker-base
+https://registry.hub.docker.com/u/radioastro/base/
 
 
 
-meqtrees
---------
-
-A base radio-astro container with the meqtrees software installed
-
-usage: `$ docker run radioastro/meqtrees <cmd>`
-
-https://registry.hub.docker.com/u/radioastro/meqtrees/
-
-
-meqtrees-nightly
-----------------
-
-A base radio-astro container with the nightly build of all meqtrees software
-
-usage: `$ docker run radioastro/meqtrees-nightly <cmd>`
-
-https://registry.hub.docker.com/u/radioastro/meqtrees-nightly/
-
-
-
-Running meqtrees browser using docker images on OSX
-===================================================
+Running meqtrees browser using docker images on OSX (depricated)
+================================================================
 
 
 install boot2docker, socat and xquart
