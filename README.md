@@ -28,8 +28,8 @@ usage: `$ docker run radioastro/base <cmd>`
 
 **note**: you can use this image as a base for your custom image. Just put `FROM: radioastro/base` as the first line in your `Dockerfile`.
 
-https://github.com/radio-astro/docker-base
-https://registry.hub.docker.com/u/radioastro/base/
+ * https://github.com/radio-astro/docker-base
+ * https://registry.hub.docker.com/u/radioastro/base/
 
 
 casa
@@ -42,8 +42,8 @@ usage: `$ docker run radioastro/casa:4.5`
 
 **note**: This container is very big.
 
-https://github.com/radio-astro/docker-base
-https://registry.hub.docker.com/u/radioastro/base/
+ * https://github.com/radio-astro/docker-base
+ * https://registry.hub.docker.com/u/radioastro/base/
 
 
 
