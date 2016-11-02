@@ -8,6 +8,8 @@ files in this reposity.
 
 You can request new images by opening a new issue in this github repository.
 
+**WARNING**: This project has been replaced by KERN and is unmaintained: http://kernsuite.info/
+
 What is docker
 ==============
 
